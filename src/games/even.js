@@ -1,13 +1,17 @@
 import readlineSync from 'readline-sync';
 
+const gameDescription = (description) => description;
+
 const getRandomInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 export default () => {
+  const rounds = 3;
+  const description = 'Answer "yes" if the number is even, otherwise answer "no".';
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  for (let i = 0; i < 3; i += 1) {
+  gameDescription(description);
+  for (let i = 0; i < rounds; i += 1) {
     const randomNumber = getRandomInRange(1, 100);
     console.log(`Question: ${randomNumber}`);
     const userAnswer = readlineSync.question('Your answer: ');
