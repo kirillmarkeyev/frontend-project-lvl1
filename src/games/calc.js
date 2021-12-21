@@ -31,8 +31,8 @@ export default () => {
         break;
     }
     console.log(`Question: ${firstNumber} ${operator} ${secondNumber}`);
-    const userAnswerStr = readlineSync.question('Your answer: ');
-    const userAnswer = Number(userAnswerStr);
+    let userAnswer = readlineSync.question('Your answer: ');
+    userAnswer = Number(userAnswer);
     if (userAnswer === rightAnswer) {
       console.log('Correct!');
     } else {
