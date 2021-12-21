@@ -11,22 +11,14 @@ export default () => {
   gameDescription(description);
   for (let i = 0; i < rounds; i += 1) {
     const randomNumber = getRandomInRange(1, 100);
+    const rightAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
     console.log(`Question: ${randomNumber}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    if (randomNumber % 2 === 0) {
-      if (userAnswer === 'yes') {
-        console.log('Correct!');
-      } else {
-        console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${userName}!`);
-        return;
-      }
-    } if (randomNumber % 2 !== 0) {
-      if (userAnswer === 'no') {
-        console.log('Correct!');
-      } else {
-        console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`);
-        return;
-      }
+    if (userAnswer === rightAnswer) {
+      console.log('Correct!');
+    } else {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`);
+      return;
     }
   } console.log(`Congratulations, ${userName}!`);
 };
