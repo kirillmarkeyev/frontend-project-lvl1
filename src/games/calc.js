@@ -1,14 +1,16 @@
 import readlineSync from 'readline-sync';
 
-import { gameDescription, getRandomInRange } from '../index.js';
+import {
+  userWelcome, gameDescription, getRandomInRange, userCongratulate, userGreeting,
+} from '../index.js';
 
 export default () => {
   const description = 'What is the result of the expression?';
   const operators = ['+', '-', '*'];
   const rounds = 3;
-  console.log('Welcome to the Brain Games!');
+  userWelcome();
   const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
+  userGreeting(userName);
   gameDescription(description);
   for (let i = 0; i < rounds; i += 1) {
     let rightAnswer;
@@ -37,5 +39,5 @@ export default () => {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}.\nLet's try again, ${userName}!`);
       return;
     }
-  } console.log(`Congratulations, ${userName}!`);
+  } userCongratulate(userName);
 };
