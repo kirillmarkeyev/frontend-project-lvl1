@@ -1,8 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const gameDescription = (description) => description;
-
-const getRandomInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+import { gameDescription, getRandomInRange } from '../index.js';
 
 export default () => {
   const rounds = 3;
