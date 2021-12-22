@@ -1,3 +1,5 @@
+/* eslint-disable consistent-return */
+
 import readlineSync from 'readline-sync';
 
 import {
