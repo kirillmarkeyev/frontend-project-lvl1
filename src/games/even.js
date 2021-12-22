@@ -1,11 +1,10 @@
 import readlineSync from 'readline-sync';
 
 import {
-  userWelcome, gameDescription, getRandomInRange, userCongratulate, userGreeting,
+  userWelcome, gameDescription, rounds, getRandomInRange, userCongratulate, userGreeting,
 } from '../index.js';
 
 export default () => {
-  const rounds = 3;
   const description = 'Answer "yes" if the number is even, otherwise answer "no".';
   userWelcome();
   const userName = readlineSync.question('May I have your name? ');
