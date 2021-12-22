@@ -17,7 +17,7 @@ const gcd = (a, b) => {
     if (a === 0) {
       return b;
     } return gcd(a, b % a);
-  } return a;
+  }
 };
 
 export default () => {
