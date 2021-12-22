@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 
 import {
-  userWelcome, gameDescription, getRandomInRange, userCongratulate, userGreeting,
+  userWelcome, gameDescription, rounds, getRandomInRange, userCongratulate, userGreeting,
 } from '../index.js';
 
 const gcd = (a, b) => {
@@ -22,7 +22,6 @@ const gcd = (a, b) => {
 
 export default () => {
   const description = 'Find the greatest common divisor of given numbers.';
-  const rounds = 3;
   userWelcome();
   const userName = readlineSync.question('May I have your name? ');
   userGreeting(userName);
