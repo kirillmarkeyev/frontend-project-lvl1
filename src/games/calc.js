@@ -1,13 +1,12 @@
 import readlineSync from 'readline-sync';
 
 import {
-  userWelcome, gameDescription, getRandomInRange, userCongratulate, userGreeting,
+  userWelcome, gameDescription, rounds, getRandomInRange, userCongratulate, userGreeting,
 } from '../index.js';
 
 export default () => {
   const description = 'What is the result of the expression?';
   const operators = ['+', '-', '*'];
-  const rounds = 3;
   userWelcome();
   const userName = readlineSync.question('May I have your name? ');
   userGreeting(userName);
