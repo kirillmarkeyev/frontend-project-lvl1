@@ -3,32 +3,42 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 [![Node.js CI](https://github.com/kirillmarkeyev/frontend-project-lvl1/actions/workflows/learn-github-actions.yml/badge.svg)](https://github.com/kirillmarkeyev/frontend-project-lvl1/actions/workflows/learn-github-actions.yml)
 
-  
 
+# Five brain-games with CLI (Hexlet first project)
 
-+ ### brain-even demonstration:
+### Installation:
+```
+$ git clone git@github.com:kirillmarkeyev/frontend-project-lvl1.git
+$ cd frontend-project-lvl1/
+$ make install
+$ sudo npm link
+```
+
+## Description and demonstration:
+
+### brain-even game:
 [![asciicast](https://asciinema.org/a/yZyJReR2rBRZdzP4Uqe1zrsY5.svg)](https://asciinema.org/a/yZyJReR2rBRZdzP4Uqe1zrsY5)
+Run `$ brain-even`. Answer "yes" if the number is even, otherwise answer "no". 
 
-  
 
-
-+ ### brain-calc demonstration:
+### brain-calc game:
 [![asciicast](https://asciinema.org/a/7u5mBntygMiHh488NH7hyoftC.svg)](https://asciinema.org/a/7u5mBntygMiHh488NH7hyoftC)
+Run `$ brain-calc`. Calculate the result of the expression.
 
-  
 
 
-+ ### brain-gcd demonstration:
+### brain-gcd game:
 [![asciicast](https://asciinema.org/a/vtDstr8bDHWETQDNFQ6B4Bgx1.svg)](https://asciinema.org/a/vtDstr8bDHWETQDNFQ6B4Bgx1)
+Run `$ brain-gcd`. Find the greatest common divisor of given numbers.
 
-  
 
 
-+ ### brain-progression demonstration:
+### brain-progression demonstration:
 [![asciicast](https://asciinema.org/a/tIeDQOTsZPdnDr748ocYFDJjK.svg)](https://asciinema.org/a/tIeDQOTsZPdnDr748ocYFDJjK)
+Run `$ brain-progression`. What number is missing in the progression?
 
-  
-  
 
-+ ### brain-prime demonstration:
+
+### brain-prime demonstration:
 [![asciicast](https://asciinema.org/a/xvbEDHuMeCWJ6HNTvMdd9KXqW.svg)](https://asciinema.org/a/xvbEDHuMeCWJ6HNTvMdd9KXqW)
+Run `$ brain-prime`. Answer "yes" if given number is prime. Otherwise answer "no".
