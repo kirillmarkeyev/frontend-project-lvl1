@@ -1,5 +1,3 @@
-/* eslint-disable consistent-return */
-
 import readlineSync from 'readline-sync';
 
 import {
@@ -7,9 +5,6 @@ import {
 } from '../index.js';
 
 const gcd = (a, b) => {
-  if (a === b) {
-    return a;
-  }
   if (a > b) {
     if (b === 0) {
       return a;
@@ -19,7 +14,7 @@ const gcd = (a, b) => {
     if (a === 0) {
       return b;
     } return gcd(a, b % a);
-  }
+  } return a;
 };
 
 export default () => {
