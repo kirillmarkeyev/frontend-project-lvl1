@@ -5,16 +5,14 @@ import {
 } from '../index.js';
 
 const gcd = (a, b) => {
-  if (a > b) {
-    if (b === 0) {
-      return a;
-    } return gcd(b, a % b);
-  }
-  if (b > a) {
-    if (a === 0) {
-      return b;
-    } return gcd(a, b % a);
-  } return a;
+  if (a === b) {
+    return a;
+  } const maxDivisor = a > b ? b : a;
+  for (let divisor = maxDivisor; divisor > 1; divisor -= 1) {
+    if (a % divisor === 0 && b % divisor === 0) {
+      return divisor;
+    }
+  } return 1;
 };
 
 export default () => {
