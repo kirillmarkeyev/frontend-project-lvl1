@@ -5,9 +5,7 @@ import {
 } from '../index.js';
 
 const gcd = (a, b) => {
-  if (a === b) {
-    return a;
-  } const maxDivisor = a > b ? b : a;
+  const maxDivisor = a > b ? b : a;
   for (let divisor = maxDivisor; divisor > 1; divisor -= 1) {
     if (a % divisor === 0 && b % divisor === 0) {
       return divisor;
