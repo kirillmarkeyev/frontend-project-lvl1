@@ -1,8 +1,8 @@
-import readlineSync from 'readline-sync';
-
 import {
-  userWelcome, gameDescription, rounds, getRandomInRange, userCongratulate, userGreeting,
+  getRandomInRange, commonGameLogic,
 } from '../index.js';
+
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   for (let divisor = 2; divisor < num; divisor += 1) {
@@ -12,22 +12,13 @@ const isPrime = (num) => {
   } return true;
 };
 
+const roundGenerator = () => {
+  const question = getRandomInRange(3, 50);
+  const rightAnswer = (isPrime(question)) ? 'yes' : 'no';
+  // Используем массив, чтобы функция возвращала сразу два значения
+  return [question, rightAnswer];
+};
+
 export default () => {
-  const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  userWelcome();
-  const userName = readlineSync.question('May I have your name? ');
-  userGreeting(userName);
-  gameDescription(description);
-  for (let i = 0; i < rounds; i += 1) {
-    const randomNumber = getRandomInRange(3, 50);
-    const rightAnswer = (isPrime(randomNumber)) ? 'yes' : 'no';
-    console.log(`Question: ${randomNumber}`);
-    const userAnswer = readlineSync.question('Your answer: ');
-    if (userAnswer === rightAnswer) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`);
-      return;
-    }
-  } userCongratulate(userName);
+  commonGameLogic(description, roundGenerator);
 };
