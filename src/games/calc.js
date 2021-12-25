@@ -1,8 +1,8 @@
-import readlineSync from 'readline-sync';
-
 import {
-  userWelcome, gameDescription, rounds, getRandomInRange, userCongratulate, userGreeting,
+  getRandomInRange, commonGameLogic,
 } from '../index.js';
+
+const description = 'What is the result of the expression?';
 
 const calculate = (a, b, operator) => {
   let result;
@@ -22,26 +22,17 @@ const calculate = (a, b, operator) => {
   return result;
 };
 
-export default () => {
-  const description = 'What is the result of the expression?';
+const roundGenerator = () => {
   const operators = ['+', '-', '*'];
-  userWelcome();
-  const userName = readlineSync.question('May I have your name? ');
-  userGreeting(userName);
-  gameDescription(description);
-  for (let i = 0; i < rounds; i += 1) {
-    const firstNumber = getRandomInRange(1, 100);
-    const secondNumber = getRandomInRange(1, 100);
-    const operator = operators[getRandomInRange(0, operators.length - 1)];
-    const rightAnswer = calculate(firstNumber, secondNumber, operator);
-    console.log(`Question: ${firstNumber} ${operator} ${secondNumber}`);
-    let userAnswer = readlineSync.question('Your answer: ');
-    userAnswer = Number(userAnswer);
-    if (userAnswer === rightAnswer) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`);
-      return;
-    }
-  } userCongratulate(userName);
+  const firstNumber = getRandomInRange(1, 20);
+  const secondNumber = getRandomInRange(1, 9);
+  const operator = operators[getRandomInRange(0, operators.length - 1)];
+  const rightAnswer = calculate(firstNumber, secondNumber, operator);
+  const question = `${firstNumber} ${operator} ${secondNumber}`;
+  // Используем массив, чтобы функция возвращала сразу два значения
+  return [question, String(rightAnswer)];
+};
+
+export default () => {
+  commonGameLogic(description, roundGenerator);
 };
