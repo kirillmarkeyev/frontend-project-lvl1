@@ -1,8 +1,8 @@
-import readlineSync from 'readline-sync';
-
 import {
-  userWelcome, gameDescription, rounds, getRandomInRange, userCongratulate, userGreeting,
+  getRandomInRange, commonGameLogic,
 } from '../index.js';
+
+const description = 'Find the greatest common divisor of given numbers.';
 
 const gcd = (a, b) => {
   const maxDivisor = a > b ? b : a;
@@ -13,24 +13,15 @@ const gcd = (a, b) => {
   } return 1;
 };
 
+const roundGenerator = () => {
+  const firstNumber = getRandomInRange(1, 30);
+  const secondNumber = getRandomInRange(1, 30);
+  const rightAnswer = gcd(firstNumber, secondNumber);
+  const question = `${firstNumber} ${secondNumber}`;
+  // Используем массив, чтобы функция возвращала сразу два значения
+  return [question, String(rightAnswer)];
+};
+
 export default () => {
-  const description = 'Find the greatest common divisor of given numbers.';
-  userWelcome();
-  const userName = readlineSync.question('May I have your name? ');
-  userGreeting(userName);
-  gameDescription(description);
-  for (let i = 0; i < rounds; i += 1) {
-    const firstNumber = getRandomInRange(1, 30);
-    const secondNumber = getRandomInRange(1, 30);
-    const rightAnswer = gcd(firstNumber, secondNumber);
-    console.log(`Question: ${firstNumber} ${secondNumber}`);
-    let userAnswer = readlineSync.question('Your answer: ');
-    userAnswer = Number(userAnswer);
-    if (userAnswer === rightAnswer) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`);
-      return;
-    }
-  } userCongratulate(userName);
+  commonGameLogic(description, roundGenerator);
 };
