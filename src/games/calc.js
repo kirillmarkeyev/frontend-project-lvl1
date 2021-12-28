@@ -7,21 +7,16 @@ const description = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
 
 const calculate = (a, b, operator) => {
-  let result;
   switch (operator) {
     case '+':
-      result = a + b;
-      break;
+      return a + b;
     case '-':
-      result = a - b;
-      break;
+      return a - b;
     case '*':
-      result = a * b;
-      break;
+      return a * b;
     default:
       throw new Error(`Unknown ${operator}!`);
   }
-  return result;
 };
 
 const roundGenerator = () => {
