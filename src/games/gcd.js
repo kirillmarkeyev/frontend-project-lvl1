@@ -1,6 +1,6 @@
-import {
-  getRandomInRange, commonGameLogic,
-} from '../index.js';
+import commonGameLogic from '../index.js';
+
+import getRandomInRange from '../utils.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
@@ -10,7 +10,8 @@ const gcd = (a, b) => {
     if (a % divisor === 0 && b % divisor === 0) {
       return divisor;
     }
-  } return 1;
+  }
+  return 1;
 };
 
 const roundGenerator = () => {
@@ -22,6 +23,8 @@ const roundGenerator = () => {
   return [question, String(rightAnswer)];
 };
 
-export default () => {
+const gcdGame = () => {
   commonGameLogic(description, roundGenerator);
 };
+
+export default gcdGame;

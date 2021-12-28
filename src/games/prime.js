@@ -1,6 +1,6 @@
-import {
-  getRandomInRange, commonGameLogic,
-} from '../index.js';
+import commonGameLogic from '../index.js';
+
+import getRandomInRange from '../utils.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -9,7 +9,8 @@ const isPrime = (num) => {
     if (num % divisor === 0) {
       return false;
     }
-  } return true;
+  }
+  return true;
 };
 
 const roundGenerator = () => {
@@ -19,6 +20,8 @@ const roundGenerator = () => {
   return [question, rightAnswer];
 };
 
-export default () => {
+const gamePrime = () => {
   commonGameLogic(description, roundGenerator);
 };
+
+export default gamePrime;

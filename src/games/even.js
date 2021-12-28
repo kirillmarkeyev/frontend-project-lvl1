@@ -1,6 +1,6 @@
-import {
-  getRandomInRange, commonGameLogic,
-} from '../index.js';
+import commonGameLogic from '../index.js';
+
+import getRandomInRange from '../utils.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -11,6 +11,8 @@ const roundGenerator = () => {
   return [question, rightAnswer];
 };
 
-export default () => {
+const evenGame = () => {
   commonGameLogic(description, roundGenerator);
 };
+
+export default evenGame;

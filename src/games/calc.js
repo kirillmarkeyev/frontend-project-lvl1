@@ -1,8 +1,10 @@
-import {
-  getRandomInRange, commonGameLogic,
-} from '../index.js';
+import commonGameLogic from '../index.js';
+
+import getRandomInRange from '../utils.js';
 
 const description = 'What is the result of the expression?';
+
+const operators = ['+', '-', '*'];
 
 const calculate = (a, b, operator) => {
   let result;
@@ -17,13 +19,12 @@ const calculate = (a, b, operator) => {
       result = a * b;
       break;
     default:
-      break;
+      throw new Error(`Unknown ${operator}!`);
   }
   return result;
 };
 
 const roundGenerator = () => {
-  const operators = ['+', '-', '*'];
   const firstNumber = getRandomInRange(1, 20);
   const secondNumber = getRandomInRange(1, 9);
   const operator = operators[getRandomInRange(0, operators.length - 1)];
@@ -33,6 +34,8 @@ const roundGenerator = () => {
   return [question, String(rightAnswer)];
 };
 
-export default () => {
+const calcGame = () => {
   commonGameLogic(description, roundGenerator);
 };
+
+export default calcGame;
