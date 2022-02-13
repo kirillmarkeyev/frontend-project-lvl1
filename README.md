@@ -4,14 +4,14 @@
 [![Node.js CI](https://github.com/kirillmarkeyev/frontend-project-lvl1/actions/workflows/learn-github-actions.yml/badge.svg)](https://github.com/kirillmarkeyev/frontend-project-lvl1/actions/workflows/learn-github-actions.yml)
 
 
-# Five brain-games with CLI (Hexlet first project)
+# Five brain-games with command-line interface (my first project)
 
 ### Installation:
 ```
-$ git clone git@github.com:kirillmarkeyev/frontend-project-lvl1.git
-$ cd frontend-project-lvl1/
-$ make install
-$ sudo npm link
+git clone git@github.com:kirillmarkeyev/frontend-project-lvl1.git
+cd frontend-project-lvl1/
+make install
+sudo npm link
 ```
 
 ## Description and demonstration:
