@@ -4,8 +4,8 @@
 [![Node.js CI](https://github.com/kirillmarkeyev/frontend-project-lvl1/actions/workflows/learn-github-actions.yml/badge.svg)](https://github.com/kirillmarkeyev/frontend-project-lvl1/actions/workflows/learn-github-actions.yml)
 
 
-# Five brain-games with command-line interface (my first project)
-
+# Five brain-games with command-line interface
+My first project.
 ### Installation:
 ```
 git clone git@github.com:kirillmarkeyev/frontend-project-lvl1.git
