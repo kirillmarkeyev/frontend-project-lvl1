@@ -18,24 +18,24 @@ sudo npm link
 
 ### brain-even game:
 [![asciicast](https://asciinema.org/a/yZyJReR2rBRZdzP4Uqe1zrsY5.svg)](https://asciinema.org/a/yZyJReR2rBRZdzP4Uqe1zrsY5)
-Run `$ brain-even`. Answer "yes" if the number is even, otherwise answer "no". 
+Run `brain-even`. Answer "yes" if the number is even, otherwise answer "no". 
 
 
 ### brain-calc game:
 [![asciicast](https://asciinema.org/a/7u5mBntygMiHh488NH7hyoftC.svg)](https://asciinema.org/a/7u5mBntygMiHh488NH7hyoftC)
-Run `$ brain-calc`. Calculate the result of the expression.
+Run `brain-calc`. Calculate the result of the expression.
 
 
 
 ### brain-gcd game:
 [![asciicast](https://asciinema.org/a/vtDstr8bDHWETQDNFQ6B4Bgx1.svg)](https://asciinema.org/a/vtDstr8bDHWETQDNFQ6B4Bgx1)
-Run `$ brain-gcd`. Find the greatest common divisor of given numbers.
+Run `brain-gcd`. Find the greatest common divisor of given numbers.
 
 
 
 ### brain-progression demonstration:
 [![asciicast](https://asciinema.org/a/tIeDQOTsZPdnDr748ocYFDJjK.svg)](https://asciinema.org/a/tIeDQOTsZPdnDr748ocYFDJjK)
-Run `$ brain-progression`. What number is missing in the progression?
+Run `brain-progression`. What number is missing in the progression?
 
 
 
